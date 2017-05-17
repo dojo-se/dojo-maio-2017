@@ -1,0 +1,14 @@
+{
+  "name": "contando-as-letras-dos-numeros",
+  "version": "1.0.0",
+  "description": "Dojo Unit 2017/Maio GDGARACAJU",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
