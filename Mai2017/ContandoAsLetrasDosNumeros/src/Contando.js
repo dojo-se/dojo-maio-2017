@@ -3,8 +3,12 @@ function getExtenso(numero) {
     return (regulares[numero]).length;
 }
 
-function calcLengthInterval(){
-
+function calcLengthInterval(numeroInicial, numeroFinal){
+    var cont = 0;
+    for(;numeroInicial<= numeroFinal; numeroInicial++){
+        cont +=getExtenso(numeroInicial)
+    }
+    return cont;
 }
 
 regulares = {
@@ -34,4 +38,4 @@ irregulares = {
     100: "cem"
 };
 
-module.exports = getExtenso; 
+module.exports = calcLengthInterval; 
