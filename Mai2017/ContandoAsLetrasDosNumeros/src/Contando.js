@@ -1,5 +1,33 @@
-function Teste(){
-    return true;
+
+function getExtenso(numero) {
+    return 2;
 }
 
-module.exports = Teste; 
+regulares = {
+   "1": "um",
+   "2": "dois",
+   "3": "três",
+   "4": "quatro",
+   "5": "cinco",
+   "6": "seis",
+   "7": "sete",
+   "8": "oito",
+   "9": "nove",
+   "10": "dez",
+   "20": "vinte",
+};
+
+irregulares = {
+    "11": "onze",
+    "12": "doze",
+    "13": "treze",
+    "14": "catorze",
+    "15": "quinze",
+    "16": "dezesseis",
+    "17": "dezessete",
+    "18": "dezoito",
+    "19": "dezenove",
+    "100": "cem"
+};
+
+module.exports = getExtenso; 
