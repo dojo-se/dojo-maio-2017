@@ -22,3 +22,9 @@ describe('Teste de intervalo de 1 a 20', function() {
     expect(Contando(1,20)).to.equal(104);
   });
 });
+
+describe('Teste de intervalo de 100 a 101', function() {
+  it('deve retornar 8', function() {
+    expect(Contando(100,101)).to.equal(11);
+  });
+});

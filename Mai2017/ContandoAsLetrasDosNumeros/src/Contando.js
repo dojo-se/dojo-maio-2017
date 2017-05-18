@@ -1,20 +1,26 @@
 
 function getExtenso(numero) {
-    if(regulares[numero]){
-        return (regulares[numero]).length;
-    } else if(irregulares[numero]){
-        return (irregulares[numero]).length;
-    }
+    return (regulares[numero] || irregulares[numero]).length;
 }
 
 function calcLengthInterval(numeroInicial, numeroFinal){
     var cont = 0;
     for(;numeroInicial<= numeroFinal; numeroInicial++){
-        cont += getExtenso(numeroInicial)
-    }
+        if (numeroInicial > 100 && numeroInicial % 100 !== 0 ){
+           cont += getExtenso(numeroInicial % 100) + centenas[parseInt(numeroInicial/100) * 100].length + 1;
+        } else {
+        cont += getExtenso(numeroInicial);
+        }
+    } // cem cento e um
     return cont;
 }
-
+var centenas = {
+    100: "cento",
+    200: "duzentos",
+    300: "trezentos",
+    400: "quatrocentos",
+    500: "quinhetos"
+};
 regulares = {
    1: "um",
    2: "dois",
