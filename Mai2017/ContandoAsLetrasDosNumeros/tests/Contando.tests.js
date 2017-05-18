@@ -17,4 +17,8 @@ describe('Teste de intervalo de 1 a 5', function() {
   });
 });
 
-
+describe('Teste de intervalo de 1 a 20', function() {
+  it('deve retornar 104', function() {
+    expect(Contando(1,20)).to.equal(104);
+  });
+});

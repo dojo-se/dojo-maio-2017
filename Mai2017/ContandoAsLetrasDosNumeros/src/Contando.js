@@ -1,12 +1,16 @@
 
 function getExtenso(numero) {
-    return (regulares[numero]).length;
+    if(regulares[numero]){
+        return (regulares[numero]).length;
+    } else if(irregulares[numero]){
+        return (irregulares[numero]).length;
+    }
 }
 
 function calcLengthInterval(numeroInicial, numeroFinal){
     var cont = 0;
     for(;numeroInicial<= numeroFinal; numeroInicial++){
-        cont +=getExtenso(numeroInicial)
+        cont += getExtenso(numeroInicial)
     }
     return cont;
 }
@@ -23,6 +27,13 @@ regulares = {
    9: "nove",
    10: "dez",
    20: "vinte",
+   30: "trinta",
+   40: "quarenta",
+   50: "cinquenta",
+   60: "sessenta",
+   70: "setenta",
+   80: "oitenta",
+   90: "noventa"
 };
 
 irregulares = {
